@@ -15,6 +15,10 @@
 		1667021C1D998DD100F85AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1667021A1D998DD100F85AF7 /* LaunchScreen.storyboard */; };
 		166702241D998E8000F85AF7 /* BoxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166702231D998E8000F85AF7 /* BoxesViewController.swift */; };
 		166702261D998EED00F85AF7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166702251D998EED00F85AF7 /* Message.swift */; };
+		1671B3171D99C44B004102CF /* MessageTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671B3131D99C44B004102CF /* MessageTextCell.swift */; };
+		1671B3181D99C44B004102CF /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671B3141D99C44B004102CF /* NewMessageController.swift */; };
+		1671B3191D99C44B004102CF /* SenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671B3151D99C44B004102CF /* SenderCell.swift */; };
+		1671B31A1D99C44B004102CF /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671B3161D99C44B004102CF /* SubjectCell.swift */; };
 		B003694C494B06B18E711598 /* Pods_Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D74A1B8947835B1075F6341 /* Pods_Messages.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,10 @@
 		1667021D1D998DD100F85AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		166702231D998E8000F85AF7 /* BoxesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxesViewController.swift; sourceTree = "<group>"; };
 		166702251D998EED00F85AF7 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1671B3131D99C44B004102CF /* MessageTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTextCell.swift; sourceTree = "<group>"; };
+		1671B3141D99C44B004102CF /* NewMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
+		1671B3151D99C44B004102CF /* SenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderCell.swift; sourceTree = "<group>"; };
+		1671B3161D99C44B004102CF /* SubjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
 		6D74A1B8947835B1075F6341 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A073BB795615A8318BBF98 /* Pods-Messages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messages.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messages/Pods-Messages.release.xcconfig"; sourceTree = "<group>"; };
 		E00F6E7311A1B6DC6016552A /* Pods-Messages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Messages/Pods-Messages.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +75,10 @@
 		1667020E1D998DD100F85AF7 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				1671B3131D99C44B004102CF /* MessageTextCell.swift */,
+				1671B3141D99C44B004102CF /* NewMessageController.swift */,
+				1671B3151D99C44B004102CF /* SenderCell.swift */,
+				1671B3161D99C44B004102CF /* SubjectCell.swift */,
 				1667020F1D998DD100F85AF7 /* AppDelegate.swift */,
 				166702111D998DD100F85AF7 /* MasterViewController.swift */,
 				166702131D998DD100F85AF7 /* DetailViewController.swift */,
@@ -221,9 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1671B3171D99C44B004102CF /* MessageTextCell.swift in Sources */,
 				166702241D998E8000F85AF7 /* BoxesViewController.swift in Sources */,
 				166702141D998DD100F85AF7 /* DetailViewController.swift in Sources */,
+				1671B31A1D99C44B004102CF /* SubjectCell.swift in Sources */,
 				166702261D998EED00F85AF7 /* Message.swift in Sources */,
+				1671B3191D99C44B004102CF /* SenderCell.swift in Sources */,
+				1671B3181D99C44B004102CF /* NewMessageController.swift in Sources */,
 				166702121D998DD100F85AF7 /* MasterViewController.swift in Sources */,
 				166702101D998DD100F85AF7 /* AppDelegate.swift in Sources */,
 			);
