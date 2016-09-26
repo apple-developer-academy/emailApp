@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class Message: NSObject {
 
@@ -53,6 +54,12 @@ class Message: NSObject {
         }
     }
     
+    var created: String {
+        get {
+            return record["created_at"] as! String
+        }
+    }
+    
     private init(withRecord record: [String: AnyObject]) {
         self.record = record
         super.init()
@@ -68,13 +75,25 @@ class Message: NSObject {
         super.init()
     }
     
-    class func list(completionHandler: ((_ messages: [Message])->())) {
-        
-        
+    static func list(completionHandler: @escaping ([Message]) -> ()) {
+        Alamofire.request("http:/localhost:3000/emails").responseJSON { response in
+            if let JSON = response.result.value as? [[String : AnyObject]] {
+                let messages = JSON.map { object in
+                    return Message(withRecord: object)
+                }
+                
+                completionHandler(messages)
+            }
+        }
     }
     
-    class func createMessageWithSender(sender: String, subject: String, text: String, completionHandler: ((_ message: Message?)->())) {
-        
-        let message = Message(withSender: sender, subject: subject, andText: text)
+    static func createMessageWithSender(sender: String, subject: String, text: String, completionHandler: @escaping (Message?) -> ()) {
+        let parameters = ["sender" : sender, "subject" : subject, "text" : text]
+        Alamofire.request("http:/localhost:3000/emails", method: .post, parameters: parameters).responseJSON { response in
+            if let JSON = response.result.value as? [String : AnyObject] {
+                let message = Message(withRecord: JSON)
+                completionHandler(message)
+            }
+        }
     }
 }
